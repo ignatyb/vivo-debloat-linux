@@ -1,46 +1,23 @@
-
-<div align="center">
-  <img src="/Images/img.svg" width="300px" />
-</div>
-
 ## About
-<p>Windows batch script which can remove bloatware apps from your android device (specially vivo)<p>
+<p>Bash / Windows batch script which can remove bloatware apps from your android device (Made for Vivo, but works for any other as well)<p>
 
 ## Usage
-
-1. Download the Code
-2. Enable USB debugging in Android Device from Developer options
-```
-   Setting > Additional settings > Developer Options > Usb Debugging
-```
-3. Run **Clickhere.bat** file
-4. Allow the popup came on Mobile
-5. Follow the steps
+1. You need ADB installed. Check out [this]([url](https://www.xda-developers.com/install-adb-windows-macos-linux/)) tutorial if you're new
+2. Run **Windows.bat** file if you're on Windows, or **Bash.bash** on Linux or macOS.
+3. Check out your phone and if there's a pop-up, click "Allow".
+4. Choose whichever option and see the magic.
 
 ## Features
-
-1. Removes Vivo apps (Specially Bloatware Apps)
-2. Removes Google Assistant, Google Movie, Google Play Music, Google Duo 
-3. Removes System updates (This will disable your software update From vivo)
-4. Removes Facebook Apps Service (This app consume lot of battery)
-5. Removes Imanager (Only Imanager)
-6. Removes Touchpal Keyboard Completely
-
-## Screenshot
-  <img src="/Images/img1.jpg" width="auto"/>
-  <img src="/Images/img2.jpg" width="auto"/>
-
+Removing bloatware. Duh.
   
 ## Important Note
 
-If you want to recover the deleted or disabled app or package
+The bash script is written better than the Windows script. I don't like writing scripts for Windows.
 
-- Root User ==> Go to google and download the app
-- Non-root User ==> Reset your Device or download the app from the Internet
+Obviously, it's not actually deleting the program from your phone entirely, it is only removing it for the current user. To fully delete any system app, one must have rooted device.
 
+If you regret deleting some program, you can find its package name on Google and re-install it with "adb shell pm install-existing --user 0 $package-name". Or, as the last resort, fully reset your device.
 
-## Error
+## For dummies
 
-1. If the you face any error while connecting your android to pc just download and install [google adb adb driver](https://developer.android.com/studio/run/win-usb) in your pc
-2. If you don't know how to enable developer options [click here](https://www.vivo.com/in/support/questionByTitle?title=How%20to%20enable%20Developer%20options?)
-
+It's pretty much impossible to break/brick your device with this script, but if you manage to do so I'll be impressed. This script comes with no warranty whatsoever, by using it you're aknowledging the risks and taking accountability for your actions. If it doesn't work for you, it's most likely an issue on your side. You can try PM'ing me or opening an issue. Blah blah blah, mucho texto
