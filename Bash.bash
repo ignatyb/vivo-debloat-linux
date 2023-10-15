@@ -178,12 +178,12 @@ touchpal=(
 )
 
 # Function to remove every app in the array
-
+user=$(adb shell am get-current-user)
 upps() {
     local packages=("$@")  # Store the array of package names
 
     for package in "${packages[@]}"; do
-        adb shell pm uninstall -k --user 12 "$package"
+        adb shell pm uninstall -k --user $user"$package"
     done
 }
 while true; do
